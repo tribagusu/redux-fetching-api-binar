@@ -5,7 +5,7 @@ const initState = {
 }
 
 const dataReducer = (state = initState, action) => {
-  switch (action.type) {
+  switch (action.ty) {
     case TYPES.FETCH_DATA:
       return {
         data: action.payload,

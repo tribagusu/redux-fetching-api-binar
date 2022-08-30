@@ -1,14 +1,14 @@
 import TYPES from "../types"
 
 const initState = {
-  data: [],
+  users: [],
 }
 
 const dataReducer = (state = initState, action) => {
-  switch (action.ty) {
+  switch (action.type) {
     case TYPES.FETCH_DATA:
       return {
-        data: action.payload,
+        users: action.payload,
       }
     default:
       return state

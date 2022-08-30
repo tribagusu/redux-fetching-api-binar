@@ -9,7 +9,7 @@ export const getDataSuccess = (users) => {
 }
 
 export const getData = () => (dispatch) => {
-  dispatch(getDataSuccess)
+  //   dispatch(getDataSuccess)
   axios
     .get("https://reqres.in/api/users?page=2")
     .then((res) => {

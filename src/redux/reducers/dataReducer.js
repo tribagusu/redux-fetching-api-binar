@@ -1,18 +1,18 @@
-import {
-  LOADING_DATA,
-  FETCH_DATA,
-  LOADED_DATA_SUCCESS,
-  LOADED_DATA_ERROR,
-} from "../types"
+import TYPES from "../types"
 
 const initState = {
-  loading: false,
   data: [],
-  error: "",
 }
 
 const dataReducer = (state = initState, action) => {
-  return state
+  switch (action.type) {
+    case TYPES.FETCH_DATA:
+      return {
+        data: action.payload,
+      }
+    default:
+      return state
+  }
 }
 
 export default dataReducer
